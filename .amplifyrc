@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "featherknowledge-20190430205642-authRole",
+            "UnauthRoleArn": "arn:aws:iam::257891454090:role/featherknowledge-20190430205642-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::257891454090:role/featherknowledge-20190430205642-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "featherknowledge-20190430205642-deployment",
+            "UnauthRoleName": "featherknowledge-20190430205642-unauthRole",
+            "StackName": "featherknowledge-20190430205642",
+            "StackId": "arn:aws:cloudformation:us-east-1:257891454090:stack/featherknowledge-20190430205642/fc9d07c0-6bab-11e9-a7a7-0a1726208052"
+        }
+    }
+}
