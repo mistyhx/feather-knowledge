@@ -1,31 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import Amplify from 'aws-amplify';
-import awsmobile from './aws-exports';
-import { withAuthenticator } from 'aws-amplify-react';
-import './App.css';
+import React from "react";
+import Amplify from "aws-amplify";
+import awsmobile from "./aws-exports";
+import { withAuthenticator } from "aws-amplify-react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import BasicLayout from "./layouts/BasicLayout";
+import Home from "./containers/Home";
 
 Amplify.configure(awsmobile);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          feather-knowledge
-        </a>
-      </header>
-    </div>
+    <BasicLayout>
+      <Switch>
+        <Route path="/" component={Home} />
+      </Switch>
+    </BasicLayout>
   );
 }
 
-export default withAuthenticator(App, {includeGreetings:false});
+export default withAuthenticator(App, { includeGreetings: false });
