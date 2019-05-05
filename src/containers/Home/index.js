@@ -2,6 +2,8 @@ import React from "react";
 import { Card, List } from "antd";
 import "./index.less";
 
+const { Meta } = Card;
+
 const data = [
   {
     title: "Ant Design Title 1",
@@ -19,7 +21,8 @@ const data = [
 
 function Home() {
   return (
-    <div>
+    <div className="home">
+      <h2>Trending Post</h2>
       <Card>
         <List
           itemLayout="horizontal"
@@ -35,6 +38,7 @@ function Home() {
         />
       </Card>
       <div className="topics">
+        <h2>Trending Topics</h2>
         <List
           grid={{
             gutter: 16,
@@ -48,7 +52,12 @@ function Home() {
           dataSource={data}
           renderItem={item => (
             <List.Item>
-              <Card title={item.title}>Card content</Card>
+              <Card
+                cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
+                hoverable
+              >
+                <Meta title="topic" description="20 posts" />
+              </Card>
             </List.Item>
           )}
         />
