@@ -1,13 +1,30 @@
 import React from "react";
-import { Layout, Icon } from "antd";
+import { Layout, Icon, Button, Dropdown, Menu } from "antd";
 import "./index.less";
 
 const { Header } = Layout;
 
+const menu = (
+  <Menu>
+    <Menu.Item key="1">New topic</Menu.Item>
+    <Menu.Item key="2">New post</Menu.Item>
+  </Menu>
+);
+
 function GlobalHeader() {
   return (
     <Header className="header">
-      <Icon type="setting" />
+      <div className="header-right">Logo</div>
+      <div className="header-right">
+        <Icon className="header-icon" type="search" />
+
+        <Dropdown overlay={menu}>
+          <Button type="primary">
+            New <Icon type="down" />
+          </Button>
+        </Dropdown>
+        <Icon className="header-setting" type="setting" />
+      </div>
     </Header>
   );
 }
