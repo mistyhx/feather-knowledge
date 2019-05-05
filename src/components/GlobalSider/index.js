@@ -7,7 +7,7 @@ const { Sider } = Layout;
 function GlobalSider() {
   return (
     <Sider className="sider">
-      <Menu theme="light" defaultSelectedKeys={["1"]}>
+      <Menu className="sider-menu" theme="light" defaultSelectedKeys={["1"]}>
         <Menu.Item key="1">
           <Icon type="home" />
           <span>Home</span>
