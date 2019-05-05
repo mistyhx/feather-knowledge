@@ -13,7 +13,7 @@ function BasicLayout(props) {
       <Layout>
         <GlobalSider />
         <Layout>
-          <Content>{props.children}</Content>
+          <Content className="content">{props.children}</Content>
         </Layout>
       </Layout>
     </Layout>
