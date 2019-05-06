@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Icon, Button, Dropdown, Menu, Input } from "antd";
+import { Layout, Icon, Button, Dropdown, Menu, Input, Avatar } from "antd";
 import "./index.less";
 
 const { Header } = Layout;
@@ -14,10 +14,9 @@ const menu = (
 function GlobalHeader() {
   return (
     <Header className="header">
-      <div className="header-right">Logo</div>
+      <div className="header-right" />
       <div className="header-right">
-        <Icon className="header-icon" type="search" />
-        <Input placeholder="Search" />
+        <Input placeholder="Search" prefix={<Icon className="header-search" type="search" />} />
 
         <Dropdown overlay={menu}>
           <Button type="primary" className="new-button">

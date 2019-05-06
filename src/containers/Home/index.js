@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, List } from "antd";
+import { Card, List, Icon } from "antd";
 import "./index.less";
 
 const { Meta } = Card;
@@ -19,6 +19,13 @@ const data = [
   },
 ];
 
+const IconText = ({ type, text }) => (
+  <span>
+    <Icon type={type} style={{ marginRight: 8 }} />
+    {text}
+  </span>
+);
+
 function Home() {
   return (
     <div className="home">
@@ -28,7 +35,7 @@ function Home() {
           itemLayout="horizontal"
           dataSource={data}
           renderItem={item => (
-            <List.Item>
+            <List.Item actions={[<IconText type="star-o" text="156" />]}>
               <List.Item.Meta
                 title={<a href="https://ant.design">{item.title}</a>}
                 description="Ant Design, a design language for background applications, is refined by Ant UED Team"
@@ -36,6 +43,7 @@ function Home() {
             </List.Item>
           )}
         />
+        <a>View All</a>
       </Card>
       <div className="topics">
         <h2>Trending Topics</h2>
@@ -53,7 +61,9 @@ function Home() {
           renderItem={item => (
             <List.Item>
               <Card
-                cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
+                cover={
+                  <img alt="example" src="https://image.freepik.com/free-vector/blue-tree-illustration_1040-44.jpg" />
+                }
                 hoverable
               >
                 <Meta title="topic" description="20 posts" />

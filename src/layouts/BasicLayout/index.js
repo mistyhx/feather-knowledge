@@ -9,12 +9,10 @@ const { Content } = Layout;
 function BasicLayout(props) {
   return (
     <Layout className="basic-layout">
-      <GlobalHeader />
+      <GlobalSider />
       <Layout>
-        <GlobalSider />
-        <Layout>
-          <Content className="content">{props.children}</Content>
-        </Layout>
+        <GlobalHeader />
+        <Content className="content">{props.children}</Content>
       </Layout>
     </Layout>
   );
