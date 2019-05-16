@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/featherknowledge-20190430205642-deployment/amplify-cfn-templates/auth/cognito57175a46-cloudformation-template.yml",
 				"logicalId": "authcognito57175a46"
 			},
-			"lastPushTimeStamp": "2019-05-01T01:03:49.079Z",
+			"lastPushTimeStamp": "2019-05-15T02:00:37.607Z",
 			"output": {
 				"AppClientSecret": "13tgm4tptrns7632ci19oi6t58v746lbpm31pt91app8uhopb80o",
 				"UserPoolId": "us-east-1_ttYH649Q9",
@@ -29,7 +29,24 @@
 				"IdentityPoolName": "cognito57175a46_identitypool_57175a46",
 				"UserPoolName": "cognito57175a46_userpool_57175a46"
 			},
-			"lastPushDirHash": "NogIj1X1y+zKaqQkQPn+GhSTMTg="
+			"lastPushDirHash": "bwjwm5kkXgKMMbFgfJfXdvqmxvM="
+		}
+	},
+	"api": {
+		"featherknowledge": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS",
+				"GraphQLAPIIdOutput": "hveucvwbgbhtnpvclupldrvgum",
+				"GraphQLAPIEndpointOutput": "https://xg4jdywobvdtnbfl5qvimnjaji.appsync-api.us-east-1.amazonaws.com/graphql"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/featherknowledge-20190430205642-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apifeatherknowledge"
+			},
+			"lastPushTimeStamp": "2019-05-15T02:00:37.607Z",
+			"lastPushDirHash": "DBtxc8oTSYJ7wFu+k/qoplFKWR8="
 		}
 	}
 }

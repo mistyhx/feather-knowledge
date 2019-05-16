@@ -1,0 +1,17 @@
+{
+    "auth": {
+        "cognito57175a46": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation"
+        }
+    },
+    "api": {
+        "featherknowledge": {
+            "service": "AppSync",
+            "providerPlugin": "awscloudformation",
+            "output": {
+                "securityType": "AMAZON_COGNITO_USER_POOLS"
+            }
+        }
+    }
+}
