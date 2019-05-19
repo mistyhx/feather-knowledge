@@ -1,0 +1,12 @@
+type Topic @model {
+  id: ID!
+  name: String!
+  knowledge: [Knowledge] @connection(name: "TopicKnowledge")
+}
+
+type Knowledge @model {
+  id: ID!
+  title: String!
+  content: String!
+  topics: Topic @connection(name: "TopicKnowledge")
+}

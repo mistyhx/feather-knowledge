@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "featherknowledge",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognito57175a46",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "schemaGraphql": "s3://featherknowledge-20190430205642-deployment/amplify-appsync-files/schema.graphql.1557883352189",
+    "ResolverBucket": "featherknowledge-20190430205642-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1557883352189"
+}
